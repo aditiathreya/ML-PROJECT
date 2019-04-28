@@ -1,6 +1,5 @@
 import csv 
 import numpy as np 
-import matplotlib.pyplot as plt
 from sklearn.metrics import accuracy_score
 from sklearn.metrics import classification_report
 from sklearn.cross_validation import train_test_split
@@ -106,11 +105,7 @@ if __name__ == "__main__":
   
     # beta values after running gradient descent 
     beta, num_iter = grad_desc(X, y, beta) 
-  
-    # estimated beta values and number of iterations 
-    #print("Estimated regression coefficients:", beta) 
-    #print("No. of iterations:", num_iter) 
-  
+        
     # predicted labels 
     y_pred = pred_values(beta, X_test) 
       
@@ -118,6 +113,5 @@ if __name__ == "__main__":
     print("Correctly predicted labels:", np.sum(y_test == y_pred)) 
     print ('Accuracy:', accuracy_score(y_test,y_pred))
     print(classification_report(y_test,y_pred))
-      
-    # plotting regression line 
-    #plot_reg(X, y, beta) 
+    
+    
