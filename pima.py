@@ -85,28 +85,7 @@ def pred_values(beta, X):
     return np.squeeze(pred_value) 
   
   
-def plot_reg(X, y, beta): 
-    ''' 
-    function to plot decision boundary 
-    '''
-    # labelled observations 
-    x_0 = X[np.where(y == 0.0)] 
-    x_1 = X[np.where(y == 1.0)] 
-      
-    # plotting points with diff color for diff label 
-    plt.scatter([x_0[:, 1]], [x_0[:, 2]], c='b', label='y = 0') 
-    plt.scatter([x_1[:, 1]], [x_1[:, 2]], c='r', label='y = 1') 
-      
-    # plotting decision boundary 
-    x1 = np.arange(0, 1, 0.1) 
-    x2 = -(beta[0,0] + beta[0,1]*x1)/beta[0,2] 
-    plt.plot(x1, x2, c='k', label='reg line') 
-  
-    plt.xlabel('x1') 
-    plt.ylabel('x2') 
-    plt.legend() 
-    plt.show() 
-      
+
   
       
 if __name__ == "__main__": 
