@@ -84,9 +84,6 @@ def pred_values(beta, X):
     pred_value = np.where(pred_prob >= .5, 1, 0) 
     return np.squeeze(pred_value) 
   
-  
-
-  
       
 if __name__ == "__main__": 
     # load the dataset 
